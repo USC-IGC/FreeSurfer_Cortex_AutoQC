@@ -1,4 +1,4 @@
-# AutoQC for FreeSurfer Cortex
+# FreeSurfer Cortex AutoQC
 Region specific automatic quality assurance for MRI derived cortical segmentations
 
 
