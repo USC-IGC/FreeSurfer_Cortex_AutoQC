@@ -10,7 +10,7 @@ Region specific automatic quality assurance for MRI derived cortical segmentatio
 * lightgbm >= 2.3.0
 
 ## How to use the tool:
-* Clone the github directory using: git clone https://github.com/USC-IGC/AutoQC.git
+* Clone the github directory using: git clone https://github.com/USC-IGC/FreeSurfer_Cortex_AutoQC.git
 * Install all the packages required to run this tool mentioned in requirements.txt file
 * For testing the tool:
   * In scripts folder, open run.sh file and make the following changes:
