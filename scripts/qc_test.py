@@ -40,7 +40,7 @@ df_prediction = pd.DataFrame()
 df_prediction["SubjID"] = subject_list
 
 #Selected columns in dataframe
-columns = list(pd.read_csv('./features.csv').Features)
+columns = list(pd.read_csv('./models/features.csv').Features)
 X_test = df_test[columns]
 
 #Mean Imputation
