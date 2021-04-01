@@ -29,7 +29,7 @@ sh aparc_metrics.sh -o ${dirO}/aparc.csv -f ${dirFS} -s $(cat ${dirSub})
 # sh aparc_metrics_FS7.sh -o ${dirO}/aparc.csv -f ${dirFS} -s $(cat ${dirSub})  
 
 #For separating features into L and R
-${py_path} sep_feat.py --maindir ${maindir}
+${py_path} sep_feat.py --maindir ${maindir} --out ${dirO}
 
 #For generating QC predictions
 ${py_path} qc_sep.py --maindir ${maindir} --inp ${dirO}/aparc_sep.csv --out ${dirO}/QC_sep_predictions.csv
