@@ -40,4 +40,4 @@ df_R.set_axis(list_feat_new, axis=1, inplace=True)
 df_new = pd.concat([df_L, df_R], ignore_index=True)
 
 # Save dataframe
-df_new.to_csv(args.maindir + '/aparc_sep.csv', index=False)
+df_new.to_csv(args.out + '/aparc_sep.csv', index=False)
