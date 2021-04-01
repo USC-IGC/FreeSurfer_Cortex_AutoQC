@@ -12,6 +12,7 @@ dirSub=./subj.txt
 
 #Full path to output directory where the QC predictions are saved
 dirO=./results
+mkdir -p ${dirO}
 
 #Full Path to tool's main directory
 maindir=./FreeSurfer_Cortex_AutoQC
