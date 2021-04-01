@@ -1,7 +1,7 @@
 # FreeSurfer Cortex AutoQC
 Region specific automatic quality assurance for MRI derived cortical segmentations
 
-We make use of a large database of FreeSurfer(version 5.3) processed 12000 T1 volumes to train a machine learning model to accurately label each cortical region as a "pass" or "fail". This tool we facilitate a more anatomically accurate large-scale multi-site research. This tool provides the flexibility to predict labels for left and right lobes per region of interest(ROI) or combine it bilaterally per ROI resulting in a single label.
+We make use of a large database of FreeSurfer(version 5.3) processed 12000 T1 volumes to train a machine learning model to accurately label each cortical region as a "pass"(0) or "fail"(1). This tool we facilitate a more anatomically accurate large-scale multi-site research. This tool provides the flexibility to predict labels for left and right lobes per region of interest(ROI) or combine it bilaterally per ROI resulting in a single label.
 
 All available cortical measures were extracted for each of the parcellated regions from Desikan-Killiany atlas. This set comprises of regional measures including volume (grayvol), surface area (surfavg), thickness (thickstd and thickavg), number of vertices (numvert), and curvature measures like folding index (foldind), intrinsic curvature index (curvind), integrated rectified Gaussian curvature (gauscurv), mean curvature index (meancurv) and global measures including intracranial volume (ICV), left and right average thickness (LThickness, RThickness), left and right surface area average (LSurfavg, RSurfavg).
 
