@@ -8,10 +8,11 @@ warnings.filterwarnings('ignore')
 #Argument parser
 parser = argparse.ArgumentParser()
 parser.add_argument("--maindir", help="""Path to the tool's main directory""")
+parser.add_argument("--out", help="""Path to the output directory""")
 args = parser.parse_args()
 
 
-df_full = pd.read_csv(args.maindir + '/data/aparc.csv')
+df_full = pd.read_csv(args.out + '/aparc.csv')
 features = pd.read_csv(args.maindir + '/features.csv')
 feat_cols = list(features.Features) + ['SubjID']
 df = df_full[feat_cols]
@@ -39,4 +40,4 @@ df_R.set_axis(list_feat_new, axis=1, inplace=True)
 df_new = pd.concat([df_L, df_R], ignore_index=True)
 
 # Save dataframe
-df_new.to_csv(args.maindir + '/data/aparc_sep.csv', index=False)
+df_new.to_csv(args.maindir + '/aparc_sep.csv', index=False)
