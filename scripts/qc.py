@@ -40,7 +40,7 @@ df_prediction = pd.DataFrame()
 df_prediction["SubjID"] = subject_list
 
 #Selected columns in dataframe
-columns = list(pd.read_csv('./models/features.csv').Features)
+columns = list(pd.read_csv('./features.csv').Features)
 X_test = df_test[columns]
 
 #Mean Imputation
@@ -50,13 +50,14 @@ X_test = SimpleImputer().fit(X_test).transform(X_test)
 X_test = normalize(X_test)
 
 #Scaling
-minmax = pickle.load(open('./models/minimax.sav', 'rb'))
+minmax = pickle.load(open('./models/minmax.sav', 'rb'))
 X_test = minmax.transform(X_test)
 
 #Generate dataframe from array
 X_test = pd.DataFrame(X_test)
 X_test.columns = columns
     
+
 for selected_roi in roi_list:
     #Load model and predict labels 
     file = './models/model_' + str(selected_roi) + '.sav'
@@ -67,5 +68,5 @@ for selected_roi in roi_list:
     
 
 #Save the predictions in csv file
-df_prediction.to_csv(args.out)
+df_prediction.to_csv(args.out, index=False)
 
