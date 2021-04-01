@@ -8,10 +8,10 @@ All available cortical measures were extracted for each of the parcellated regio
 Light Gradient Boosted Network with Random Forest base estimator was trained on data from UK Biobank, PPMI and PNC to make the predictions. This repository provides you with the training script if anyone wishes to train on other data, pre-trained models for testing and a script to predict the labels directly. 
 
 ## Requirements:
-* python >= 3.7.9
+* python == 3.7.9
 * jupyterlab >= 1.1.4
 * scikit-learn == 0.23.2
-* pandas >= 1.1.3
+* pandas == 1.1.3
 * lightgbm == 2.3.0
 
 ## How to use the tool:
