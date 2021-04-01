@@ -38,6 +38,7 @@ Light Gradient Boosted Network with Random Forest base estimator was trained on 
     5. Add the full path to the main directory(FreeSurfer_Cortex_AutoQC) on line 18
     6. If using FSv7.1.1, comment line 26 and uncomment line 29 
   * Run the bash file ---> sh qc_fs_sep.sh
+  * The "qc_predictions_sep" file would have twice the number of subjects because of left and right lobes.For eg: if you are testing model for 10 subjects, the first 10 rows in the prediction file would have labels for left lobe and next 10 rows for the right one.
 
 ## References:
 ISBI link:
