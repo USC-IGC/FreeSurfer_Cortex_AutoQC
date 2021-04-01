@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 
 #Argument parser
 parser = argparse.ArgumentParser()
-parsser.add_argument("--maindir", help="""path to tool's main directory""")
+parser.add_argument("--maindir", help="""path to tool's main directory""")
 parser.add_argument("--inp", help="""Input path with aparc measures csv file""")
 parser.add_argument("--out", help="""output path with name of the file """)
 args = parser.parse_args()
