@@ -18,14 +18,24 @@ Light Gradient Boosted Network with Random Forest base estimator was trained on 
 * Clone the github directory using: git clone https://github.com/USC-IGC/FreeSurfer_Cortex_AutoQC.git
 * Install all the packages required to run this tool mentioned in requirements.txt file.
 * The "run.sh" file would extract features and feed it to the model and predict the labels for each ROI.
-* For testing the tool:
-  * In scripts folder, open run.sh file and make the following changes:
-    1. Add the path for python on line 7
-    2. Add the FS directory path on line 10
-    3. Add the path for subject list text file on line 13
-    4. Add the output directory path on line 16
+
+* For testing the tool and predicting single label for each ROI:
+  * In scripts folder, open qc_fs.sh file and make the following changes:
+    1. Add the path for python on line 5
+    2. Add the FS directory path on line 8
+    3. Add the path for subject list text file on line 11
+    4. Add the output directory path on line 14
     5. If using FSv7.1.1, comment line 26 and uncomment line 29 
-  * Run the bash file ---> sh run.sh
+  * Run the bash file ---> sh qc_fs.sh
+
+* For testing the tool and predicting label for left and right lobe separately for each ROI:
+  * In scripts folder, open qc_fs_sep.sh file and make the following changes:
+    1. Add the path for python on line 5
+    2. Add the FS directory path on line 8
+    3. Add the path for subject list text file on line 11
+    4. Add the output directory path on line 14
+    5. If using FSv7.1.1, comment line 26 and uncomment line 29 
+  * Run the bash file ---> sh qc_fs_sep.sh
 
 ## References:
 ISBI link:
