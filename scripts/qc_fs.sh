@@ -1,22 +1,21 @@
 #!/bin/bash
 #$ -S /bin/bash
 
-# Python with required libraries
+#Full path to Python with required libraries
 py_path=./Anaconda3/bin/python
 
-#FS directory
+#Full paath to FS directory
 dirFS=./cross_section/sc_cross_section
 
-#Path to the subject list
-dirSub=./data/subj.txt
+#Full Path to the subject list
+dirSub=./subj.txt
 
-#Output directory where the QC predictions are saved
+#Full path to output directory where the QC predictions are saved
 dirO=./results
 
-############ DO NOT CHANGE THIS PATH #############
-#Python Script path 
-script=./scripts
-cd ${script}
+#Full Path to tool's main directory
+maindir=./FreeSurfer_Cortex_AutoQC
+cd ${maindir}/scripts
 ################################################## 
 
 
@@ -29,4 +28,4 @@ sh aparc_metrics.sh -o ${dirO}/aparc.csv -f ${dirFS} -s $(cat ${dirSub})
 # sh aparc_metrics_FS7.sh -o ${dirI}/aparc.csv -f ${dirFS} -s $(cat ${dirSub})
 
 #For generating QC predictions
-${py_path} qc.py --inp ${dirO}/aparc.csv --out ${dirO}/QC_predictions.csv
+${py_path} qc.py --maindir ${maindir} --inp ${dirO}/aparc.csv --out ${dirO}/QC_predictions.csv
