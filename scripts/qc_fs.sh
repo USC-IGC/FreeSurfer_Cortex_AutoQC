@@ -26,7 +26,7 @@ cd ${maindir}/scripts
 sh aparc_metrics.sh -o ${dirO}/aparc.csv -f ${dirFS} -s $(cat ${dirSub})
 
 #For FS version 7.1.1, use,
-# sh aparc_metrics_FS7.sh -o ${dirI}/aparc.csv -f ${dirFS} -s $(cat ${dirSub})
+# sh aparc_metrics_FS7.sh -o ${dirO}/aparc.csv -f ${dirFS} -s $(cat ${dirSub})
 
 #For generating QC predictions
 ${py_path} qc.py --maindir ${maindir} --inp ${dirO}/aparc.csv --out ${dirO}/QC_predictions.csv
