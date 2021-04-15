@@ -44,6 +44,10 @@ df_prediction["SubjID"] = subject_list
 columns = list(pd.read_csv(args.maindir + '/features_sep.csv').Features)
 X_test = df_test[columns]
 
+#Get the indices which have more than 10 values missing
+na_index = X_test.apply(lambda x: (len(columns) - x.count()), axis=1)
+na_index_ls = np.where(na_index>10)
+
 #Mean Imputation
 X_test = SimpleImputer().fit(X_test).transform(X_test)
 
@@ -69,5 +73,8 @@ for selected_roi in roi_list:
     
 
 #Save the predictions in csv file
+for x in  na_index_ls:
+    df_prediction.iloc[x,1:] = "FS fail"
 df_prediction.to_csv(args.out, index=False)
+
 
