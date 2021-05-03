@@ -48,6 +48,11 @@ X_test = df_test[columns]
 na_index = X_test.apply(lambda x: (len(columns) - x.count()), axis=1)
 na_index_ls = np.where(na_index>10)
 
+#Get the indices where LSurfArea/RSurfArea is <0.8 or >1.2
+X_test["ratio_SurfArea"] = X_test.LSurfArea / X_test.RSurfArea
+cond_index_ls = np.where((X_test.ratio_SurfArea>1.2) | (X_test.ratio_SurfArea<0.8))
+X_test.drop(labels=["ratio_SurfArea"], axis=1, inplace=True)
+
 #Mean Imputation
 X_test = SimpleImputer().fit(X_test).transform(X_test)
 
@@ -72,8 +77,13 @@ for selected_roi in roi_list:
     
 
 #Save the predictions in csv file
-for x in  na_index_ls:
+for x in na_index_ls:
     df_prediction.iloc[x,1:] = "FS fail"
+    
+if len(cond_index_ls) > 0:
+    for x in cond_index_ls:
+        df_prediction.iloc[x,1:] = "fail"
+        
 df_prediction.to_csv(args.out, index=False)
 
 
