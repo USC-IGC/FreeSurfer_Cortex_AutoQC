@@ -41,4 +41,4 @@ Light Gradient Boosted Network with Random Forest base estimator was trained on 
   * The "qc_predictions_sep" file would have twice the number of subjects because of left and right lobes.For eg: if you are testing model for 10 subjects, the first 10 rows in the prediction file would have labels for left lobe and next 10 rows for the right one.
 
 ## References:
-ISBI link:
+ISBI link: https://doi.org/10.1109/ISBI48211.2021.9433755
