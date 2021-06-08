@@ -7,6 +7,9 @@ All available cortical measures were extracted for each of the parcellated regio
 
 Light Gradient Boosted Network with Random Forest base estimator was trained on data from UK Biobank, PPMI and PNC to make the predictions. This repository provides you with the training script if anyone wishes to train on other data, pre-trained models for testing and a script to predict the labels directly. 
 
+## How to Cite:
+S. Gadewar et al., "Region Specific Automatic Quality Assurance For MRI-Derived Cortical Segmentations," 2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI), 2021, pp. 1288-1291, doi: 10.1109/ISBI48211.2021.9433755.
+
 ## Requirements:
 * python == 3.7.9
 * jupyterlab >= 1.1.4
@@ -42,6 +45,3 @@ Light Gradient Boosted Network with Random Forest base estimator was trained on 
 
 ## References:
 ISBI link: https://doi.org/10.1109/ISBI48211.2021.9433755
-
-## How to Cite:
-S. Gadewar et al., "Region Specific Automatic Quality Assurance For MRI-Derived Cortical Segmentations," 2021 IEEE 18th International Symposium on Biomedical Imaging (ISBI), 2021, pp. 1288-1291, doi: 10.1109/ISBI48211.2021.9433755.
